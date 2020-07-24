@@ -15,8 +15,8 @@ options.add_argument('--proxy-bypass-list=*')
 options.add_argument('--start-maximized')
 options.add_argument('--headless')
 
-# ダウンロードファイルを指定
-download_dir = "ファイルのパス"
+# ダウンロードフォルダを指定
+download_dir = "フォルダのパス"
 prefs = {"download.default_directory" : download_dir}
 options.add_experimental_option("prefs",prefs)
 
@@ -36,6 +36,8 @@ params = {
     }
 }
 driver.execute("send_command", params=params)
+
+# ログインページにアクセス
 driver.get("アクセスするURL")
 
 time.sleep(10)
